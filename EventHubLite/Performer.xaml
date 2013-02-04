@@ -1,0 +1,71 @@
+﻿<phone:PhoneApplicationPage xmlns:my="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
+    x:Class="EventHubLite.Performer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!--Pivot Control-->
+        <controls:Pivot Name="PerformerPivot" Grid.Row="0" FontSize="{StaticResource PhoneFontSizeLarge}">
+            <!--Pivot item one-->
+            <controls:PivotItem Header="about">
+                <Grid Margin="0,0,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Width="432">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="128"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Name="performerImage" Grid.Column="0" Margin="0,0,25,0"/>
+                            <TextBlock Name="performerName" TextWrapping="Wrap" Grid.Column="1" FontSize="{StaticResource PhoneFontSizeLarge}" Foreground="{StaticResource PhoneAccentBrush}"/>
+                        </Grid>
+                    </StackPanel>
+
+                    <ScrollViewer Grid.Row="1" >
+                        <StackPanel Width="432">
+                            <TextBlock Text="Short Bio" Margin="0,20,0,0" />
+                            <TextBlock Name="shortBio" TextWrapping="Wrap" Foreground="Gray" FontSize="{StaticResource PhoneFontSizeMediumLarge}" />
+                            <TextBlock Text="Long Bio" Margin="0,30,0,0"/>
+                            <TextBlock Name="longBio" TextWrapping="Wrap" Foreground="Gray" FontSize="{StaticResource PhoneFontSizeMediumLarge}" />
+                            <TextBlock Text="Comments about Performer" Margin="0,30,0,0"/>
+                            <TextBlock Name="comments" TextWrapping="Wrap" Foreground="Gray" FontSize="{StaticResource PhoneFontSizeMediumLarge}"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </controls:PivotItem>
+        </controls:Pivot>
+        <my:AdControl  Grid.Row="1" ApplicationId="eaf57671-6b50-4fca-91e2-4c0335e07962" AdUnitId="92089" Height="80" Width="480" />
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton x:Name="appbar_button1" IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton x:Name="appbar_button2" IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem x:Name="menuItem1" Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem x:Name="menuItem2" Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+    
+</phone:PhoneApplicationPage>

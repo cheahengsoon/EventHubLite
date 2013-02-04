@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventHubLite", "EventHubLite\EventHubLite.csproj", "{2D45ECEF-988D-482A-8065-EC9B54CD7D2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventViewModelLibrary", "EventViewModelLibrary\EventViewModelLibrary.csproj", "{14BFE937-340E-4D19-988E-566E90A52475}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveTileAgent", "LiveTileAgent\LiveTileAgent.csproj", "{4FCB1CBC-5846-49FB-B4FC-6BA4C1CF147C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D45ECEF-988D-482A-8065-EC9B54CD7D2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D45ECEF-988D-482A-8065-EC9B54CD7D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D45ECEF-988D-482A-8065-EC9B54CD7D2E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2D45ECEF-988D-482A-8065-EC9B54CD7D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D45ECEF-988D-482A-8065-EC9B54CD7D2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D45ECEF-988D-482A-8065-EC9B54CD7D2E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{14BFE937-340E-4D19-988E-566E90A52475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14BFE937-340E-4D19-988E-566E90A52475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14BFE937-340E-4D19-988E-566E90A52475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14BFE937-340E-4D19-988E-566E90A52475}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FCB1CBC-5846-49FB-B4FC-6BA4C1CF147C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FCB1CBC-5846-49FB-B4FC-6BA4C1CF147C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FCB1CBC-5846-49FB-B4FC-6BA4C1CF147C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FCB1CBC-5846-49FB-B4FC-6BA4C1CF147C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
