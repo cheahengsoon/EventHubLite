@@ -94,7 +94,8 @@ namespace LiveTileAgent
         {
             if (ev.Error == null)
             {
-                eventsViewModel tileEvent;
+                //eventsViewModel tileEvent;
+                List<eventsViewModel> tileEvent = new List<eventsViewModel>();
 
                 string result = ev.Result;
                 XDocument xdoc = XDocument.Parse(result);
@@ -142,19 +143,23 @@ namespace LiveTileAgent
                         loc.Y = -9999; // Error code for unavaliable.
                     }
 
-                    tileEvent = new eventsViewModel() { Description = record.Element("description").Value, DisplayImageSource = imageMedium, Id = record.Attribute("id").Value, Location = loc, Performers = performers, startTime = record.Element("start_time").Value, Title = record.Element("title").Value, Url = new Uri(record.Element("url").Value), VenueName = record.Element("venue_name").Value + ", " + record.Element("city_name").Value };
-
-                    //Create live tile
+                    //tileEvent = new eventsViewModel() { Description = record.Element("description").Value, DisplayImageSource = imageMedium, Id = record.Attribute("id").Value, Location = loc, Performers = performers, startTime = record.Element("start_time").Value, Title = record.Element("title").Value, Url = new Uri(record.Element("url").Value), VenueName = record.Element("venue_name").Value + ", " + record.Element("city_name").Value };
+                    tileEvent.Add(new eventsViewModel() { Description = record.Element("description").Value, DisplayImageSource = imageMedium, Id = record.Attribute("id").Value, Location = loc, Performers = performers, startTime = record.Element("start_time").Value, Title = record.Element("title").Value, Url = new Uri(record.Element("url").Value), VenueName = record.Element("venue_name").Value + ", " + record.Element("city_name").Value });
+                }
 
                     StandardTileData UpdateTileData = new StandardTileData
                     {
-                        BackgroundImage = new Uri(tileEvent.DisplayImageSource, UriKind.RelativeOrAbsolute),
-                        Title = tileEvent.Title,
-                        BackTitle = tileEvent.VenueName,
-                        BackContent = tileEvent.displayEventTime
+                        //BackgroundImage = new Uri(tileEvent[0].DisplayImageSource, UriKind.RelativeOrAbsolute),
+                        //Title = tileEvent[0].Title,
+                        //BackTitle = tileEvent[0].VenueName,
+                        //BackContent = tileEvent[0].displayEventTime
+                        Title = tileEvent[0].Title,
+                        BackgroundImage = new Uri(tileEvent[0].DisplayImageSource, UriKind.RelativeOrAbsolute),
+                        BackTitle = tileEvent[1].displayEventTime,
+                        BackContent = tileEvent[1].Title
                     };
 
-                    settings["EventClicked"] = tileEvent;
+                    settings["EventClicked"] = tileEvent[0];
                     settings.Save();
 
                     ShellTile TileToFind = ShellTile.ActiveTiles.FirstOrDefault(x => x.NavigationUri.ToString().Contains("TileID=2"));
@@ -164,7 +169,6 @@ namespace LiveTileAgent
                     {
                         TileToFind.Update(UpdateTileData);
                     }
-                }
             }
             NotifyComplete();
         }

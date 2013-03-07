@@ -56,7 +56,7 @@
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
                             <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Event Hub Lite" Grid.Row="0" FontSize="{StaticResource PhoneFontSizeLarge}" />
-                            <TextBlock Text="1.5" Grid.Row="1" HorizontalAlignment="Center" FontSize="{StaticResource PhoneFontSizeLarge}" />
+                            <TextBlock Text="1.6" Grid.Row="1" HorizontalAlignment="Center" FontSize="{StaticResource PhoneFontSizeLarge}" />
                         </Grid>
                         <TextBlock Text="Created By :" Grid.Row="1" Grid.Column="0" Foreground="MediumSeaGreen" FontSize="{StaticResource PhoneFontSizeLarge}" Margin="0,12,0,0" />
                         <TextBlock  VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Saurabh Arora" Grid.Row="1" Grid.Column="1" FontSize="{StaticResource PhoneFontSizeLarge}" Margin="0,12,0,0" />

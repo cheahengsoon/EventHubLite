@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{3807628b-d520-4a1d-b0b3-2872cfb1c4a2}" Title="Event Hub Lite" RuntimeType="Silverlight" Version="1.5.0.0" Genre="apps.normal" Author="EventHubLite author" Description="Sample description" Publisher="EventHubLite">
+  <App xmlns="" ProductID="{3807628b-d520-4a1d-b0b3-2872cfb1c4a2}" Title="Event Hub Lite" RuntimeType="Silverlight" Version="1.6.0.0" Genre="apps.normal" Author="EventHubLite author" Description="Sample description" Publisher="EventHubLite">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_GAMERSERVICES" />

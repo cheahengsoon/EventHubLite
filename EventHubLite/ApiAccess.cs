@@ -48,7 +48,7 @@ namespace EventHubLite
                 uri += "&category=" + category;
             }
 
-            uri += "&date=" + date + "&page_size=25&sort_order=" + sortOrder;
+            uri += "&date=" + date + "&page_size=15&sort_order" + sortOrder;
 
             callWebService(uri, type);
         }
